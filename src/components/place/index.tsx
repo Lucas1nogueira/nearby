@@ -28,7 +28,9 @@ export function Place({ data, ...rest }: Props) {
       <Image style={style.image} source={{ uri: data.cover }} />
       <View style={style.content}>
         <Text style={style.name}>{data.name}</Text>
-        <Text style={style.description}>{data.description}</Text>
+        <Text style={style.description} numberOfLines={2}>
+          {data.description}
+        </Text>
         <View style={style.footer}>
           <Entypo name={"ticket"} size={16} color={colors.red.base} />
           <Text style={style.tickets}>{data.coupons} cupons disponíveis</Text>
